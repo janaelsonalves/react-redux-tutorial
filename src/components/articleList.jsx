@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => {
@@ -7,9 +7,9 @@ const mapStateToProps = state => {
 
 const ConnectedList = ({ articles }) => (
   <ul className="list-group list-group-flush">
-    {articles.map(el => (
-      <li className="list-group-item" key={el.id}>
-        {el.title}
+    {articles.map(article => (
+      <li className="list-group-item" key={article.id}>
+        {article.title}
       </li>
     ))}
   </ul>
